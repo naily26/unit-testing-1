@@ -7,8 +7,20 @@ void main() {
     _calculator = Calculator();
   });
 
-  test(
-    'calculator.sumTwoNumbers() sum both numbers',
-    () => expect(_calculator.sumTwoNumbers(1, 2), 3)
-  );
+  // test(
+  //   'calculator.sumTwoNumbers() sum both numbers',
+  //   () => expect(_calculator.sumTwoNumbers(1, 2), 3)
+  // );
+
+  group('sumTwoNumbers() tests', () {
+    test(
+      'calculator.sumTwoNumbers() sum both numbers',
+      () => expect(_calculator.sumTwoNumbers(1, 2), 3)
+    );
+
+    test(
+      'calculator.sumTwoNumbers() sum both numbers',
+      () => expect(_calculator.sumTwoNumbers(1, -1), 0)
+    );
+  });
 }
